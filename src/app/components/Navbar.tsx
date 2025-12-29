@@ -35,24 +35,24 @@ export function Navbar() {
 
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center gap-8">
+          <div className="hidden lg:flex items-center h-20 gap-8">
             <a href="#" className="text-white hover:text-white/80 transition-colors">
               Home
             </a>
 
             {/* About Dropdown */}
             <div
-              className="relative"
+              className="relative group"
               onMouseEnter={() => setIsAboutDropdownOpen(true)}
               onMouseLeave={() => setIsAboutDropdownOpen(false)}
             >
-              <button className="text-white hover:text-white/80 transition-colors flex items-center gap-1">
+              <button className="text-white hover:text-white/80 h-full transition-colors flex items-center gap-1 h-32">
                 About
                 <ChevronDown className="w-4 h-4" />
               </button>
 
               {isAboutDropdownOpen && (
-                <div className="absolute top-full left-0 mt-2 w-48 bg-[#1a1a1a] border border-white/10 rounded-lg shadow-xl py-2">
+                <div className="absolute top-full left-0 pt-2 w-48 bg-[#1a1a1a] border border-white/10 rounded-lg shadow-xl py-2">
                   <a href="#" className="block px-4 py-2 text-white hover:bg-white/5 transition-colors">
                     Our Team
                   </a>
